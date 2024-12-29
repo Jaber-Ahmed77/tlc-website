@@ -70,7 +70,7 @@ export default function OurPartners({ locale }) {
   ];
 
   return (
-    <section className="bg-[url('../../../public/partner-bg.jpg')] bg-cover relative">
+    <section className="bg-[url('/public/partner-bg.jpg')] bg-cover relative">
       <div className="absolute w-full h-full bg-blueShades-600/70 top-0 left-0" />
       <div className="max-w-6xl relative z-10 mx-auto my-10 px-7 lg:px-0 py-24">
         <div className="flex flex-col md:flex-row justify-between gap-4 md:items-center ">
