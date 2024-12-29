@@ -23,7 +23,7 @@ export default function SearchModal({ isOpen, setIsOpen }) {
 
       <div className="absolute top-0 left-0 w-full h-full bg-white" onClick={() => setIsOpen(false)}/>
 
-      <div className="w-full flex flex-col justify-center items-center z-50 gap-5 py-4 px-32">
+      <div className="w-full flex flex-col justify-center items-center z-50 gap-5 py-4 px-4 md:px-32">
         <input
           type="text"
           value={searchQuery}
