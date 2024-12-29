@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'], // Allow localhost for development
     remotePatterns: [
       {
         protocol: 'http',
