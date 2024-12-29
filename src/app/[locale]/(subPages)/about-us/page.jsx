@@ -11,7 +11,7 @@ export default function AboutUs() {
 
   const links = [
     { id: 1, title: "home", url: "/" },
-    { id: 2, title: "Certificates" },
+    { id: 2, title: "About us" },
   ];
 
   const counterData = {
