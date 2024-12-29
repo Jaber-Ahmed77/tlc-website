@@ -32,6 +32,7 @@ export default function WhoSection() {
             icon={<FaArrowRight />}
             rounded="rounded-3xl"
             hover="hover:bg-black "
+            url="/about-us"
           />
         </div>
       </div>
