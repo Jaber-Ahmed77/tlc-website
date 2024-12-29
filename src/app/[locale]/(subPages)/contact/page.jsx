@@ -4,58 +4,61 @@ import { BsTelephone } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { MdAlternateEmail } from "react-icons/md";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const links = [
   { id: 1, title: "HOME", url: "/" },
   { id: 2, title: "Contact Us" },
 ];
 
-const contactData = [
-  {
-    id: 1,
-    title: "Head Office Address:",
-    link: "https://maps.app.goo.gl/x21FvkFKz2Lx8gKZ9",
-    desc: "Riyadh 14328-8196, Riyadh, Saudi Arabia",
-    icon: <TiLocationOutline size={50} />,
-  },
-  {
-    id: 2,
-    title: "Number: ",
-    desc: "+966 55 613 6600",
-    link: "tel:+966556136600",
-    icon: <BsTelephone size={50} />,
-  },
-  {
-    id: 3,
-    title: "Number: ",
-    desc: "+966 57 049 3675",
-    link: "tel:+966570493675",
-    icon: <BsTelephone size={50} />,
-  },
-  {
-    id: 4,
-    title: "Whatsapp Number:",
-    desc: "+966 57 049 3675",
-    link: "https://wa.me/+966570493675",
-    icon: <IoLogoWhatsapp size={50} />,
-  },
-  {
-    id: 5,
-    title: "FAX:",
-    desc: "+966500194017",
-    link: "tel:+966500194017",
-    icon: <BsTelephone size={50} />,
-  },
-  {
-    id: 6,
-    title: "Email:",
-    desc: "info@saTLC.com",
-    link: "mailto:info@saTLC.com",
-    icon: <MdAlternateEmail size={50} />,
-  },
-];
-
 export default function Contact() {
+  const t = useTranslations("common");
+
+  const contactData = [
+    {
+      id: 1,
+      title: t("contactUs.officeAddress"),
+      link: "https://maps.app.goo.gl/x21FvkFKz2Lx8gKZ9",
+      desc: "Riyadh 14328-8196, Riyadh, Saudi Arabia",
+      icon: <TiLocationOutline size={50} />,
+    },
+    {
+      id: 2,
+      title: t("contactUs.unifiedNumber"),
+      desc: "+966 55 613 6600",
+      link: "tel:+966556136600",
+      icon: <BsTelephone size={50} />,
+    },
+    {
+      id: 3,
+      title: t("contactUs.unifiedNumber"),
+      desc: "+966 57 049 3675",
+      link: "tel:+966570493675",
+      icon: <BsTelephone size={50} />,
+    },
+    {
+      id: 4,
+      title: t("contactUs.whatsApp"),
+      desc: "+966 57 049 3675",
+      link: "https://wa.me/+966570493675",
+      icon: <IoLogoWhatsapp size={50} />,
+    },
+    {
+      id: 5,
+      title: t("contactUs.fax"),
+      desc: "+966500194017",
+      link: "tel:+966500194017",
+      icon: <BsTelephone size={50} />,
+    },
+    {
+      id: 6,
+      title: t("contactUs.unifiedEmail"),
+      desc: "info@saTLC.com",
+      link: "mailto:info@saTLC.com",
+      icon: <MdAlternateEmail size={50} />,
+    },
+  ];
+
   return (
     <InnerLayout links={links}>
       <section className="w-full flex justify-center flex-wrap gap-4">

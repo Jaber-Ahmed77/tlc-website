@@ -1,5 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import SwiperSlide
+import { Swiper } from "swiper/react"; // Import SwiperSlide
 import { Pagination, Autoplay } from "swiper/modules"; // Corrected Swiper imports
 import "swiper/css";
 import "swiper/css/pagination";

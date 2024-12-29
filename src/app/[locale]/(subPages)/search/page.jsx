@@ -18,8 +18,8 @@ export default function Search({ params, searchParams }) {
     const finalData = [];
     keys.forEach((item, index) => {
         const result = data[item].reduce((acc, item) => {
-            const searchParams = item?.title[locale] ?? item?.description[locale]
-            if (searchParams.toLowerCase().includes(val)) {
+            const searchParams = item?.title[locale].toLowerCase() ?? item?.description[locale].toLowerCase()
+            if (searchParams.includes(val.toLowerCase())) {
                acc.push({...item, type: keys[index]});
               }
               return acc;

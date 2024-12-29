@@ -4,7 +4,6 @@ import InnerLayout from "@/components/shared/InnerLayout";
 import AdvantagesSection from "@/components/whoWeAreSection.jsx/AdvantagesSection";
 import WhoAboutSection from "@/components/whoWeAreSection.jsx/WhoAboutSection";
 import { useTranslations } from "next-intl";
-import React, { use } from "react";
 
 export default function AboutUs() {
 

@@ -22,6 +22,9 @@ export default function Counter({ value }) {
 
   // Intersection Observer: Detect if the counter is in view
   useEffect(() => {
+    
+    const counter = ref.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setInView(entry.isIntersecting);
@@ -29,13 +32,13 @@ export default function Counter({ value }) {
       { threshold: 0.1 } // Trigger when 10% of the element is visible
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (counter) {
+      observer.observe(counter);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (counter) {
+        observer.unobserve(counter);
       }
     };
   }, []);

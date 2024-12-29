@@ -1,14 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import Btn from "../ui/btns/Btn";
+import { useState } from "react";
 
 export default function SearchModal({ isOpen, setIsOpen }) {
-  if(!isOpen) return null;
-
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
+
+  if(!isOpen) return null;
 
   const handleSearch = () => {
     if (searchQuery.trim()) {

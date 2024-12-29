@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
@@ -10,7 +10,7 @@ export default function Accordion({ data }) {
     if (data.id === 1) {
       setIsOpen(true);
     }
-  }, []);
+  }, [data.id]);
 
   return (
     <div

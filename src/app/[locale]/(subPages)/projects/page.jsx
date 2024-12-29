@@ -9,7 +9,7 @@ import fullData from "@/data/FullData.json";
 import ProjectCard from "@/components/shared/ProjectCard";
 import { useTranslations } from "next-intl";
 
-export default function page({ params }) {
+export default function Projects({ params }) {
 
   const t = useTranslations("common");
 
@@ -56,7 +56,7 @@ export default function page({ params }) {
     >
       {projects.map((project) => (
         <div data-aos="fade-up" key={project.id}>
-          <ProjectCard data={project} />
+          <ProjectCard data={project} type="projects"/>
         </div>
       ))}
     </InnerLayout>

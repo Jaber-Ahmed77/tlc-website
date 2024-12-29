@@ -1,8 +1,5 @@
-import Counter from "@/components/Counter";
 import CertificateCard from "@/components/shared/CertificateCard";
 import InnerLayout from "@/components/shared/InnerLayout";
-import Image from "next/image";
-import { CiSearch } from "react-icons/ci";
 import { useTranslations } from "use-intl";
 
 export default function CertificatesPage() {

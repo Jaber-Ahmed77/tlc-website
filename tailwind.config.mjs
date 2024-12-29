@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const tailwindConfig = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -51,15 +51,16 @@ export default {
           200: "#707070",
           300: "#F2F2F2",
           400: "#1A1A1A",
-          400: "#A8A8A8",
-          500: "#f3f7fb",
+          500: "#A8A8A8",
           600: "#212529",
         },
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"], // Add Montserrat font family
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
+export default tailwindConfig;

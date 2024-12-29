@@ -77,7 +77,7 @@ export default function OurProjects({ locale }) {
                   className="object-cover h-full w-full object-center"
                 />
               </div>
-              <div className="flex flex-col justify-between min-h-full gap-3">
+              <div className="flex flex-col min-h-full gap-3">
                 <h4 className="font-bold">{project.title[locale]}</h4>
                 <p className="text-sm md:text-base text-grayShades-200 overflow-hidden line-clamp-4">
                   {project.description[locale]}

@@ -6,10 +6,10 @@ import { ImCross } from "react-icons/im";
 import { useState } from "react";
 
 export default function MediaModal({ isOpen, setIsOpen, type, link, imgs }) {
-  if (!isOpen) return null;
-
   const [current, setCurrent] = useState(1);
   const imgsLength = imgs ? Object.keys(imgs).length : null;
+
+  if (!isOpen) return null;
 
   const handleClick = () => {
     setIsOpen(false);

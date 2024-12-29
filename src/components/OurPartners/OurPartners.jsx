@@ -1,15 +1,11 @@
 "use client";
 
-import { FaArrowRight } from "react-icons/fa6";
-import Btn from "../ui/btns/Btn";
 import Image from "next/image";
-import Link from "next/link";
 import Slider from "../Slider";
 import { SwiperSlide } from "swiper/react";
 import { useTranslations } from "next-intl";
 
 export default function OurPartners({ locale }) {
-
   const t = useTranslations("common");
 
   const partners = [
@@ -69,9 +65,7 @@ export default function OurPartners({ locale }) {
     },
     {
       id: 7,
-      images: [
-        "/partners/25.webp",
-      ],
+      images: ["/partners/25.webp"],
     },
   ];
 
@@ -81,7 +75,10 @@ export default function OurPartners({ locale }) {
       <div className="max-w-6xl relative z-10 mx-auto my-10 px-7 lg:px-0 py-24">
         <div className="flex flex-col md:flex-row justify-between gap-4 md:items-center ">
           <h3 className="text-2xl md:text-3xl  font-bold capitalize text-white">
-            <span className="text-blueShades-300">{t("ourPartners.highlighted")}</span> {locale === "en" ? t("ourPartners.title") : ""}
+            <span className="text-blueShades-300">
+              {t("ourPartners.highlighted")}
+            </span>{" "}
+            {locale === "en" ? t("ourPartners.title") : ""}
           </h3>
         </div>
 

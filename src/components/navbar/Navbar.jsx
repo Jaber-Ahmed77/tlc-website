@@ -4,7 +4,6 @@ import { GrLanguage } from "react-icons/gr";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-import Btn from "../ui/btns/Btn";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -45,25 +44,25 @@ export default function Navbar() {
               {/* Dropdown */}
               <div className="dropdown w-[230px] absolute top-[220%] -left-5 bg-white text-black text-base font-semibold p-4 rounded shadow-lg">
                 <ul>
-                  <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
+                  {/* <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/certificates">{t("certificates")}</Link>
-                  </li>
+                  </li> */}
                   <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/health">{t("health")}</Link>
                   </li>
                   <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/policies">{t("policy")}</Link>
                   </li>
-                  <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
+                  {/* <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/vendors">{t("vendor")}</Link>
-                  </li>
+                  </li> */}
                   <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/works">{t("gallery")}</Link>
                   </li>
                   <li className="border-b border-gray-300 hover:border-gray-800 px-2 py-3 cursor-pointer">
                     <Link href="/about-us">{t("about_us")}</Link>
                   </li>
-                  <li className="px-2 py-3 cursor-pointer">الميزانية</li>
+                  {/* <li className="px-2 py-3 cursor-pointer">الميزانية</li> */}
                 </ul>
               </div>
             </div>
@@ -75,9 +74,9 @@ export default function Navbar() {
           <li className="border-b-2 border-transparent hover:border-white h-fit min-h-[88px] text-center flex items-center md:px-2 lg:px-4 hover:bg-white/30 cursor-pointer">
             <Link href="/projects">{t("projects")}</Link>
           </li>
-          <li className="border-b-2 border-transparent hover:border-white h-fit min-h-[88px] text-center flex items-center md:px-2 lg:px-4 hover:bg-white/30 cursor-pointer">
+          {/* <li className="border-b-2 border-transparent hover:border-white h-fit min-h-[88px] text-center flex items-center md:px-2 lg:px-4 hover:bg-white/30 cursor-pointer">
             <Link href="/career">{t("career")}</Link>
-          </li>
+          </li> */}
           <li className="border-b-2 border-transparent hover:border-white h-fit min-h-[88px] text-center flex items-center md:px-2 lg:px-4 hover:bg-white/30 cursor-pointer">
             <Link href="/contact">{t("contact")}</Link>
           </li>
@@ -85,20 +84,22 @@ export default function Navbar() {
       </nav>
 
       <div className="flex px-2 justify-end md:justify-start items-center flex-[1] text-secondary md:text-white gap-2 lg:gap-4">
-        <HiMagnifyingGlass size={25} className="cursor-pointer" onClick={() => setIsSearchOpen(true)}/>
+        <HiMagnifyingGlass size={25} className="cursor-pointer" onClick={() => setIsSearchOpen(true)} />
 
         <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-2 cursor-pointer">
           <LanguageSwitcher />
           <GrLanguage size={20} className="md:block hidden" />
         </div>
 
-        <Btn
-          bg="bg-white md:block hidden !px-2 lg:!px-6"
-          color="text-black text-xs lg:text-sm font-bold"
-          text="Download profile"
-          rounded="rounded-3xl"
-          hover="hover:bg-secondary hover:text-white"
-        />
+        <a
+          href="/file.pdf"
+          download="file.pdf"
+          className="h-full btn rounded-3xl py-[11px] hover:bg-secondary hover:text-white text-nowrap transition duration-300 bg-white md:block hidden !px-2 lg:!px-6 text-black text-xs lg:text-sm font-bold 
+  
+  "
+        >
+          Download profile
+        </a>
 
         {/* mob nav */}
         <div className="md:hidden block">
@@ -146,24 +147,22 @@ export default function Navbar() {
                     }`}
                   >
                     <ul className="mt-2 mx-auto text-center rounded shadow-lg">
-                      <li className="px-2 py-3 cursor-pointer">
+                      {/* <li className="px-2 py-3 cursor-pointer">
                         <Link href="/certificates">{t("certificates")}</Link>
-                      </li>
+                      </li> */}
                       <li className="px-2 py-3 cursor-pointer">
-                        <Link href="/policies">
-                          {t("policy")}
-                        </Link>
+                        <Link href="/policies">{t("policy")}</Link>
                       </li>
-                      <li className="px-2 py-3 cursor-pointer">
+                      {/* <li className="px-2 py-3 cursor-pointer">
                         <Link href="/vendors">{t("vendor")}</Link>
-                      </li>
+                      </li> */}
                       <li className="px-2 py-3 cursor-pointer">
                         <Link href="/works">{t("gallery")}</Link>
                       </li>
                       <li className="px-2 py-3 cursor-pointer">
                         <Link href="/about-us">{t("about_us")}</Link>
                       </li>
-                      <li className="px-2 py-3 cursor-pointer">الميزانية</li>
+                      <li className="px-2 py-3 cursor-pointer"></li>
                     </ul>
                   </div>
                 </li>
@@ -173,9 +172,9 @@ export default function Navbar() {
                 <li className="border-b border-white hover:bg-white transition duration-300 hover:text-black px-2 py-3 text-center cursor-pointer">
                   <Link href="/projects">{t("projects")}</Link>
                 </li>
-                <li className="border-b border-white hover:bg-white transition duration-300 hover:text-black px-2 py-3 text-center cursor-pointer">
+                {/* <li className="border-b border-white hover:bg-white transition duration-300 hover:text-black px-2 py-3 text-center cursor-pointer">
                   <Link href="/career">{t("career")}</Link>
-                </li>
+                </li> */}
                 <li className="border-b border-white hover:bg-white transition duration-300 hover:text-black px-2 py-3 text-center cursor-pointer">
                   <Link href="/contact">{t("contact")}</Link>
                 </li>
@@ -184,8 +183,6 @@ export default function Navbar() {
           </aside>
         </div>
       </div>
-
-      {/* modal */}
       <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
     </header>
   );

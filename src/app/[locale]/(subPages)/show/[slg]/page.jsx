@@ -4,7 +4,7 @@ import FullData from "@/data/FullData.json";
 import { useTranslations } from "next-intl";
 import { use } from 'react';
 
-export default function page({ params, searchParams }) {
+export default function Page({ params, searchParams }) {
 
   const t = useTranslations("common");
 

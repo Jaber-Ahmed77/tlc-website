@@ -1,22 +1,12 @@
 import InnerLayout from "@/components/shared/InnerLayout";
 import Accordion from "@/components/ui/Accordion";
 import CareerForm from "@/components/ui/forms/CareerForm";
+import { useTranslations } from "next-intl";
 
 const links = [
   { id: 1, title: "HOME", url: "/" },
   { id: 2, title: "Health And Safety" },
 ];
-
-const counterData = {
-  mainTitle:
-    "We have twenty years of great experience of various type industries",
-  data: [
-    { id: 1, title: "Project Completed Last 5 Years", count: 937 },
-    { id: 2, title: "government project", count: 327 },
-    { id: 3, title: "Service Introduction", count: 704 },
-    { id: 4, title: "different job location", count: 39 },
-  ],
-};
 
 const AccordionData = [
   {
@@ -37,6 +27,19 @@ const AccordionData = [
 ];
 
 export default function Career() {
+
+  const t = useTranslations("common")
+
+  const counterData = {
+    mainTitle: t("achievements.mainTitle"),
+    data: [
+      { id: 1, title: t("achievements.achievement-1"), count: 200 },
+      { id: 2, title: t("achievements.achievement-2"), count: 140 },
+      { id: 3, title: t("achievements.achievement-3"), count: 50 },
+      { id: 4, title: t("achievements.achievement-4"), count: 5 },
+    ],
+  };
+
   return (
     <InnerLayout links={links} counterData={counterData}>
       <section className="w-full flex gap-4 flex-col-reverse md:flex-row">

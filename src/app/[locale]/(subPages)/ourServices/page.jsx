@@ -8,7 +8,7 @@ import BusinessCard from "@/components/OurBusiness/BusinessCard";
 import { useTranslations } from "next-intl";
 import fullData from "@/data/FullData.json";
 
-export default function page({ params }) {
+export default function OurServices({ params }) {
 
   const locale = use(params).locale
 

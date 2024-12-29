@@ -88,7 +88,12 @@
     },
     "contactUs": {
       "title": "We are deeply committed to meeting the needs of our customers.",
-      "desc": "Take a moment to send us your requirements and we will get back to you with a solution."
+      "desc": "Take a moment to send us your requirements and we will get back to you with a solution.",
+      "whatsApp": "Whatsapp number",
+      "fax": "FAX",
+      "officeAddress": "Head Office Address",
+      "unifiedNumber": "Unified Number",
+      "unifiedEmail": "Unified Email"
     },
     "ourNews": {
       "highlighted": "Our",
